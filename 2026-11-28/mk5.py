@@ -1,5 +1,5 @@
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
-src=Image.open('base4.png').convert('RGB')
+src=Image.open('base5.png').convert('RGB')
 bg=src.resize((1440,1920)).crop((180,0,1260,1920)).filter(ImageFilter.GaussianBlur(40))
 bg=ImageEnhance.Brightness(bg).enhance(0.5)
 canvas=bg.copy(); canvas.paste(src,(0,540))
