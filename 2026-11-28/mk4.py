@@ -1,6 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
-src=Image.open('base3.png').convert('RGB')
-bg=src.resize((1371,1920)).crop((145,0,1225,1920)).filter(ImageFilter.GaussianBlur(40))
+src=Image.open('base4.png').convert('RGB')
+bg=src.resize((1440,1920)).crop((180,0,1260,1920)).filter(ImageFilter.GaussianBlur(40))
 bg=ImageEnhance.Brightness(bg).enhance(0.5)
 canvas=bg.copy(); canvas.paste(src,(0,540))
 f=ImageFont.truetype('/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf',52)
